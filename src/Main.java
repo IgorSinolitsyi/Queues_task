@@ -1,15 +1,17 @@
 
-
 import task_01.ProductsQueue;
+import task_01.QueueDataProvider;
 import task_02.ProductsQueueExtendedVersion;
+
+import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
 //task 1
         System.out.println("Задание 1");
-        ProductsQueue productsQueue = new ProductsQueue();
+        ProductsQueue productsQueue = new ProductsQueue(new QueueDataProvider(new LinkedList<>()).createQueue());
 
-        System.out.print(productsQueue.createQueue());
+        System.out.println("Перечень создан!\n");
         productsQueue.showProductQueue();
 
         System.out.print(productsQueue.addProduct());
@@ -17,9 +19,9 @@ public class Main {
 
 //task 2
         System.out.println("\nЗадание 2");
-        ProductsQueueExtendedVersion productsQueueExtendedVersion = new ProductsQueueExtendedVersion();
+        ProductsQueueExtendedVersion productsQueueExtendedVersion = new ProductsQueueExtendedVersion(new QueueDataProvider(new LinkedList<>()).createQueue());
 
-        System.out.print(productsQueueExtendedVersion.createQueue());
+        System.out.println("Перечень создан!\n");
         productsQueueExtendedVersion.showProductQueue();
 
         System.out.print(productsQueueExtendedVersion.deleteProduct());
