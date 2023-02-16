@@ -1,11 +1,10 @@
-package task_01;
+package data_source;
 
-import java.util.LinkedList;
 import java.util.Queue;
 
-public class QueueDataProvider {
+public class QueueDataSource {
     private Queue<String> productsQueue;
-    public QueueDataProvider(Queue<String> productsQueue) {
+    public QueueDataSource(Queue<String> productsQueue) {
         this.productsQueue = productsQueue;
     }
 
